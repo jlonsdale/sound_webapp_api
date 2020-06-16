@@ -1,12 +1,34 @@
 require "sinatra"
 require "sinatra/json"
-require_relative('./wav_reader.rb')
+require 'json'
+require_relative('./lib/sound_library.rb')
 
 set :sound_folder, 'audio_files'
 
+class Cache
+
+  @@sound_library
+
+  def self.init()
+    @@sound_library = SoundLibrary.new(Dir["./audio_files/*.wav"])
+  end
+
+  def self.sound_library
+    @@sound_library
+  end
+
+end
+
+configure do
+  Cache::init()
+end
 
 get '/' do
-  'hello this is our sound api :D'
+  'hello this is our sound api :D, here are our currents sounds!'
+end
+
+get '/sounds' do
+  return JSON.generate(Cache::sound_library.getFiles)
 end
 
 get '/rain' do
