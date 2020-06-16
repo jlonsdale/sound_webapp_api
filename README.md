@@ -1,4 +1,6 @@
 # sound_webapp_api
 backend sound_webapp
 
-WAV api, hosted on https://agile-reaches-82017.herokuapp.com/
+made by <a href="https://github.com/mirimichaelson">@Miri</a> & <a href="https://github.com/jlonsdale">@Jess</a>
+
+api hosted on https://agile-reaches-82017.herokuapp.com/
