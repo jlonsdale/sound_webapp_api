@@ -1,4 +1,5 @@
 require "wavefile"
+require 'wav-file'
 include WaveFile
 
 class WavReader
@@ -9,4 +10,10 @@ class WavReader
   def printName
     @fileName
   end
+
+  def read
+    File.open("./audio_files/rain_1.wav", "rb")
+  end
+
+
 end

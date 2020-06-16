@@ -22,6 +22,7 @@ GEM
       sinatra (= 2.0.8.1)
       tilt (~> 2.0)
     tilt (2.0.10)
+    wav-file (0.0.3)
     wavefile (1.1.1)
 
 PLATFORMS
@@ -30,6 +31,7 @@ PLATFORMS
 DEPENDENCIES
   sinatra
   sinatra-contrib
+  wav-file
   wavefile
 
 BUNDLED WITH
