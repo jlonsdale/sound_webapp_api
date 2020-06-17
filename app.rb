@@ -38,3 +38,7 @@ end
 get '/chickens' do
   send_file File.join(settings.sound_folder, 'chickens_1.wav')
 end
+
+get '/cicada' do
+  send_file File.join(settings.sound_folder, 'cicada.wav')
+end
